@@ -5,7 +5,7 @@
     <body>
         <header style="display:flex;">
             <img src="UR.png" height="40PX"  alt="">
-            <h3>University of Rwanda</h3>
+            <h2>University of Rwanda</h2>
             <h1 style="margin-left:20%;">COLLEGE OF SCIENCE AND TECHNOLOGY</h1>
         </header>
         <hr>
@@ -20,10 +20,10 @@
             let department=document.write(" <h2>DEPARTMENT:COMPUTER AND SOFTWARE ENGINEERING</h2>")
             let campus=document.write("<h2>CAMPUS:NYARUGENGE</h2>")
              
-            alert("<h3>Enter your marks to get your first year transcript</h3>")
-            let sname=prompt("name","");
-            let reg=prompt("regNo.","");
-            let math1=parseFloat(prompt("Maths1 marks","0")) 
+            alert("Enter your marks to get your first year transcript")
+            let sname=prompt("Name","");
+            let reg=prompt("RegNo.","");
+            let math1=parseFloat(prompt("Maths1 marks","0")); 
             let math2=parseFloat(prompt("Maths2 marks","0")) ;
             let phy1=parseFloat(prompt("phy1 marks","0")) ;
             let phy2=parseFloat(prompt("Phy2 marks","0")) ;
@@ -519,7 +519,7 @@
             </tr>
             <tr>
                 <td>Annual average(%)</td>
-                <td colspan="8"><script>
+                <td colspan="10"><script>
                     
                     document.write(AnnualAverage+"%")
                 </script></td>
@@ -528,7 +528,7 @@
             </tr>
             <tr>
                 <td>Total module to Retake</td>
-                <td colspan="8" class="retakeValue" id="value">
+                <td colspan="10" class="retakeValue" id="value">
                     <script>
                         document.write(totalRetakes)
                     </script>
@@ -537,7 +537,7 @@
             </tr>
             <tr>
                 <td>Remarks</td>
-                <td colspan="8" class="remark">
+                <td colspan="10" class="remark">
                     <script>
                          if (totalRetakes >=3) {
     document.write("repeat")
