@@ -1,0 +1,559 @@
+<html>
+    <head>
+        <title>academic transcript</title>
+    </head>
+    <body>
+        <header style="display:flex;">
+            <img src="UR.png" height="40PX"  alt="">
+            <h3>University of Rwanda</h3>
+            <h1 style="margin-left:20%;">COLLEGE OF SCIENCE AND TECHNOLOGY</h1>
+        </header>
+        <hr>
+        <script>
+            let head1=document.write("<center><h2>SCHOOL OF ICT</h2></center>")
+            let head2=document.write("<h2>PROVISIONAL STATEMENT OF RESULT</h2>")
+            var date=new Date()
+            var day=date.getDay()
+            // alert(day)
+            // confirm("UR/CST/"+day+"/2023")
+            let time1=document.write("<h3>UR/CST/"+day+"/2023</h3></br>")
+            let department=document.write(" <h2>DEPARTMENT:COMPUTER AND SOFTWARE ENGINEERING</h2>")
+            let campus=document.write("<h2>CAMPUS:NYARUGENGE</h2>")
+             
+            alert("<h3>Enter your marks to get your first year transcript</h3>")
+            let sname=prompt("name","");
+            let reg=prompt("regNo.","");
+            let math1=parseFloat(prompt("Maths1 marks","0")) 
+            let math2=parseFloat(prompt("Maths2 marks","0")) ;
+            let phy1=parseFloat(prompt("phy1 marks","0")) ;
+            let phy2=parseFloat(prompt("Phy2 marks","0")) ;
+            let ict=parseFloat(prompt("ICT marks","0")) ;
+            let tw=parseFloat(prompt("Training workshop marks","0")) ;
+            let ele=parseFloat(prompt("Analog Electronic circuit marks","0")) ;
+            let engli=parseFloat(prompt("English for general purpose marks","0")) ;
+            let drow=parseFloat(prompt("Drawing and CAD marks","0")) ;
+            let dsc=parseFloat(prompt("Discrete structure for computing marks","0")) ;
+            let programming=parseFloat(prompt("C programming marks","0")) ;
+            let nta=parseFloat(prompt("Network analysis marks","0")) 
+            let dbs=parseFloat(prompt("Database systems marks","0")) 
+            let digital=parseFloat(prompt("Digital electronic circuit marks","0")) 
+            let citizen=parseFloat(prompt("Citizenship and Transformative Education marks","0")) 
+
+            let semesterOne=[
+                math1,phy1,ict,tw,ele,nta
+            ]
+            let semestertwo=[
+                math2,phy2,engli,dsc,programming,digital,dbs,citizen,drow
+            ]
+            const sem2Average = average(semestertwo,900)
+            const sem1Average = average(semesterOne,600)
+            console.log(sem1Average)
+            console.log(sem2Average)
+
+            function average(array,total){
+                const sum = array.reduce((sum,element) => sum + element ,0)
+                console.log(sum)
+                return (sum /total) * 100 
+            }
+            
+            const AnnualAverage =((sem1Average+sem2Average)/2).toFixed(2)
+            console.log(AnnualAverage)
+
+        
+ const retakeOne = semesterOne.filter((item) => item < 15) 
+ const retakeTwo = semestertwo.filter((item)=> item < 15) 
+ 
+ const totalRetakes = retakeOne.length + retakeTwo.length
+//  const remark = document.querySelector('.remark')
+//  cl
+//  if (totalRetakes >=3) {
+//     remark.innerHTML= 'repeat'
+//  }
+//  else if(totalRetakes <3 && totalRetakes > 0){
+//     remark.innerHTML = 'progress with retake'
+//  }
+//  else{
+//     remark.innerHTML = 'progress'
+//  }
+
+
+    // display();
+        </script>
+        <table border="1" style="width:50%; height:50px; border-collapse: collapse;"> 
+            <tr>
+            
+                <th colspan=""><b> Names</b></th>
+                <th>Reg No.</th>
+            </tr>
+            <tr>
+                <th ><script>document.write(sname)</script></th>
+                <th><script>document.write(reg)</script></th>
+            </tr>
+        </table>
+        <table border="" style="border-collapse: collapse; margin-top: 30px; width:80%;">
+            <tr>
+                <th colspan="5">First trimester</th>
+                <th colspan="5">second trimester</th>
+            </tr>
+            <tr>
+                <th>Module code</th>
+                <th>Module Title</th>
+                <th>Credit</th>
+                <th>Marks</th>
+                <th>Grades</th>
+                <th>Module code</th>
+                <th>Module Title</th>
+                <th>Credit</th>
+                <th>Marks</th>
+                <th>Grades</th>
+            </tr>
+            <tr>
+                <td>CSC1163</td>
+                <td>ICT Skills</td>
+                <td>10</td>
+                <td><script>document.write(ict)</script></td>
+                <td class="grade">
+                    <script>
+                    if(ict>=70){
+                        document.write("A")
+                    }
+                    else if(ict>=69&&ict>50){
+                        document.write("B")
+                    }
+                    else if(ict>=50&&ict>=40){
+                        document.write("C")
+                    }
+                    else if(ict>=39&&ict>20){
+                        document.write("D")
+                    }
+                    else if(ict>=20&&ict>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>EGP1111</td>
+                <td>English for general purpose</td>
+                <td>10</td>
+                <td><script>document.write(engli)</script></td>
+                <td class="grade">
+                    <script>if(engli>=70){
+                        document.write("A")
+                    }
+                    else if(engli>=69&&engli<50){
+                        document.write("B")
+                    }
+                    else if(engli>=50&&engli>=40){
+                        document.write("C")
+                    }
+                    else if(engli>=39&&engli>20){
+                        document.write("D")
+                    }
+                    else if(engli>=20&&engli>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+            </tr>
+            <tr>
+                <td>MAT1166</td>
+                <td>Mathematics for Eng |</td>
+                <td>10</td>
+                <td><script>document.write(math1)</script></td>
+                <td class="grade">
+                    <script>if(math1>=70){
+                        document.write("A")
+                    }
+                    else if(math1>=69&&math1>50){
+                        document.write("B")
+                    }
+                    else if(math1>=50&&math1>=40){
+                        document.write("C")
+                    }
+                    else if(math1>=39&&math1>20){
+                        document.write("D")
+                    }
+                    else if(math1>=20&&math1>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>MAT1264</td>
+                <td>Mathematics for Eng ||</td>
+                <td>10</td>
+                <td><script>document.write(math2)</script></td>
+                <td class="grade">
+                    <script>if(math2>=70){
+                        document.write("A")
+                    }
+                    else if(math2>=69&&math2>50){
+                        document.write("B")
+                    }
+                    else if(math2>=50&&math2>=40){
+                        document.write("C")
+                    }
+                    else if(math2>=39&&math2>20){
+                        document.write("D")
+                    }
+                    else if(math2>=20&&math2>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+            </tr>
+            <tr>
+                <td>PHY1163</td>
+                <td>Physics for eng |</td>
+                <td>10</td>
+                <td><script>document.write(phy1)</script></td>
+                <td class="grade">
+                    <script>if(phy1>=70){
+                        document.write("A")
+                    }
+                    else if(phy1>=69&&phy1>50){
+                        document.write("B")
+                    }
+                    else if(phy1>=50&&phy1>=40){
+                        document.write("C")
+                    }
+                    else if(phy1>=39&&phy1>20){
+                        document.write("D")
+                    }
+                    else if(phy1>=20&&phy1>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>PHY1264</td>
+                <td>Physics for eng ||</td>
+                <td>10</td>
+                <td><script>
+                var condition=(phy2<=100)? phy2:Error
+    document.write(condition)
+                </script></td>
+                <td class="grade">
+                    <script>if(phy2>=70){
+                        document.write("A")
+                    }
+                    else if(phy2>=69&&phy2>50){
+                        document.write("B")
+                    }
+                    else if(phy2>=50&&phy2>=40){
+                        document.write("C")
+                    }
+                    else if(phy2>=39&&phy2>20){
+                        document.write("D")
+                    }
+                    else if(phy2>=20&&phy2>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+            </tr>
+            <tr>
+                <td>ELE1161</td>
+                <td>Network Analysis</td>
+                <td>10</td>
+                <td><script>
+                var condition=(nta<=100)? nta:Error
+    document.write(condition)</script></td>
+                <td class="grade">
+                    <script>if(nta>=70){
+                        document.write("A")
+                    }
+                    else if(nta>=69&&nta>50){
+                        document.write("B")
+                    }
+                    else if(nta>=50&&nta>=40){
+                        document.write("C")
+                    }
+                    else if(nta>=39&&nta>20){
+                        document.write("D")
+                    }
+                    else if(nta>=20&&nta>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>MEE1167</td>
+                <td>Engineering Drowing and CAD</td>
+                <td>10</td>
+                <td><script>
+                
+                var condition=(drow<=100)? drow:Error
+    document.write(condition)</script></td>
+                <td class="grade">
+                    <script>if(drow>=70){
+                        document.write("A")
+                    }
+                    else if(drow>=69&&drow<50){
+                        document.write("B")
+                    }
+                    else if(drow>=50&&drow>=40){
+                        document.write("C")
+                    }
+                    else if(drow>=39&&drow>20){
+                        document.write("D")
+                    }
+                    else if(drow>=20&&drow>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+            </tr>
+            <tr>
+                <td>TWP1161</td>
+                <td>Training workshop</td>
+                <td>10</td>
+                <td><script>
+                var condition=(tw<=100)? tw:Error
+    document.write(condition)
+                </script></td>
+                <td class="grade">
+                    <script>if(tw>=70){
+                        document.write("A")
+                    }
+                    else if(tw>=69 && tw>50){
+                        document.write("B")
+                    }
+                    else if(tw>=50&&tw>=40){
+                        document.write("C")
+                    }
+                    else if(tw>=39&&tw>20){
+                        document.write("D")
+                    }
+                    else if(tw>=20&&tw>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>CSC1261</td>
+                <td>Computer programming in C</td>
+                <td>10</td>
+                <td><script>
+                var condition=(programming<=100)? programming:Error
+    document.write(condition)
+                </script></td>
+                <td class="grade">
+                    <script>if(programming>=70){
+                        document.write("A")
+                    }
+                    else if(programming>=69&&programming>50){
+                        document.write("B")
+                    }
+                    else if(programming>=50&&programming>=40){
+                        document.write("C")
+                    }
+                    else if(programming>=39&&programming>20){
+                        document.write("D")
+                    }
+                    else if(programming>=20&&programming>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+            </tr>
+            <tr>
+                <td>ETE1161</td>
+                <td>Analog Electric circuit</td>
+                <td>10</td>
+                <td><script>
+                var condition=(ele<=100)? ele:Error
+    document.write(condition)
+               </script></td>
+                <td class="grade">
+                    <script>if(ele>=70){
+                        document.write("A")
+                    }
+                    else if(ele>=69||ele>50){
+                        document.write("B")
+                    }
+                    else if(ele>=50||ele>=40){
+                        document.write("C")
+                    }
+                    else if(ele>=39||ele>20){
+                        document.write("D")
+                    }
+                    else if(ele>=20||ele>15){
+                        document.write("E")
+                    }
+                    else {
+                        document.write("F")
+                    }</script>
+                </td>
+                <td>CSC1263</td>
+                <td>Discrete structure for Computing</td>
+                <td>10</td>
+                <td><script>
+                var condition=(dsc<=100)? dsc:Error
+    document.write(condition)
+                </script></td>
+                <td class="grade">
+                    <script>if(dsc>=70){
+                    document.write("A")
+                }
+                else if(dsc>=69&&dsc>50){
+                    document.write("B")
+                }
+                else if(dsc>=50&&dsc>=40){
+                    document.write("C")
+                }
+                else if(dsc>=39&&dsc>20){
+                    document.write("D")
+                }
+                else if(dsc>=20&&dsc>15){
+                    document.write("E")
+                }
+                else {
+                    document.write("F")
+                }</script></td>
+            </tr>
+            <td colspan="5"></td>
+            <td>COE1263</td>
+            <td>Digital </td>
+            <td>10</td>
+            <td><script>
+            var condition=(digital<=100)? digital:Error
+    document.write(condition)
+           </script></td>
+                <td class="grade">
+                    <script>if(digital>=70){
+                document.write("A")
+            }
+            else if(digital>=69&&digital>50){
+                document.write("B")
+            }
+            else if(digital>=50&&digital>=40){
+                document.write("C")
+            }
+            else if(digital>=39&&digital>20){
+                document.write("D")
+            }
+            else if(digital>=20&&digital>15){
+                document.write("E")
+            }
+            else {
+                document.write("F")
+            }</script></td>
+        </tr>
+        <td colspan="5"></td>
+        <td>CTE1111</td>
+        <td>citizenship</td>
+        <td>10</td>
+        <td><script>
+        var condition=(citizen<=100)? citizen:Error
+    document.write(condition)
+    </script></td>
+                <td class="grade">
+                    <script>if(citizen>=70){
+            document.write("A")
+        }
+        else if(citizen>=69&&citizen>50){
+            document.write("B")
+        }
+        else if(citizen>=50&&citizen>=40){
+            document.write("C")
+        }
+        else if(citizen>=39&&citizen>20){
+            document.write("D")
+        }
+        else if(citizen>=20&&citizen>15){
+            document.write("E")
+        }
+        else {
+            document.write("F")
+        }</script></td>
+    </tr>
+    <td colspan="5"></td>
+    <td>COE1262</td>
+    <td>Database system</td>
+    <td>10</td>
+    <td><script>
+    var condition=(dbs<=100)? dbs:Error
+    document.write(condition)</script></td>
+                <td class="grade">
+                    <script>if(dbs>=70){
+        document.write("A")
+    }
+    else if(dbs>=69&&dbs>50){
+        document.write("B")
+    }
+    else if(dbs>=50&&dbs>=40){
+        document.write("C")
+    }
+    else if(dbs>=39&&dbs>20){
+        document.write("D")
+    }
+    else if(dbs>=20&&dbs>15){
+        document.write("E")
+    }
+    else {
+        document.write("F")
+    }</script></td>
+</tr>
+            <tr>
+                <td>Total credit Hours</td>
+                <td colspan="4">60</td>
+                <td></td>
+                <td colspan="4">90</td>
+
+            </tr>
+            <tr>
+                <td>Annual average(%)</td>
+                <td colspan="8"><script>
+                    
+                    document.write(AnnualAverage+"%")
+                </script></td>
+                <!-- <td></td>
+                <td colspan="2"></td> -->
+            </tr>
+            <tr>
+                <td>Total module to Retake</td>
+                <td colspan="8" class="retakeValue" id="value">
+                    <script>
+                        document.write(totalRetakes)
+                    </script>
+                </td>
+                <!-- <td colspan="2"></td> -->
+            </tr>
+            <tr>
+                <td>Remarks</td>
+                <td colspan="8" class="remark">
+                    <script>
+                         if (totalRetakes >=3) {
+    document.write("repeat")
+ }
+ else if(totalRetakes <3 && totalRetakes > 0){
+    document.write("progess with retake")
+ }
+ else{
+    document.write("progress")
+ }
+                    </script>
+                </td>
+                <!-- <td></td>
+                <td colspan="4"></td>
+                -->
+            </tr>
+        </table>
+    </body>
+</html>
